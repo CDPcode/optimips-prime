@@ -1,4 +1,3 @@
-div $a0, $a1, 1
 div $a0, $a1, 2
 div $a0, $a1, 4
 div $a0, $a1, 8
