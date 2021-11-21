@@ -5,6 +5,7 @@ module Utils (
     , checkOperator
     , normalizeLine
     , getOperands
+    , getOperator
     , normalizeProgram
     ) where
 
@@ -38,3 +39,6 @@ getOperands :: Text -> [Text]
 getOperands "" = []
 getOperands inst = Text.splitOn "," $ Text.concat $ tail $ Text.words inst
 
+getOperator :: Text -> Text
+getOperator "" = ""
+getOperator xs = head $ Text.words xs

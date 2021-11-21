@@ -27,6 +27,7 @@ library
   exposed-modules:
       Lib
       RedundantStoreRemoval
+      StrengthOptimizer
       Utils
   other-modules:
       Paths_optimips_prime
