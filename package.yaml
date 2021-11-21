@@ -24,6 +24,9 @@ dependencies:
 
 library:
   source-dirs: src
+  dependencies:
+  - text
+  - containers
 
 executables:
   optimips-prime-exe:
@@ -35,6 +38,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - optimips-prime
+    - text
 
 tests:
   optimips-prime-test:

@@ -26,12 +26,16 @@ source-repository head
 library
   exposed-modules:
       Lib
+      RedundantStoreRemoval
+      Utils
   other-modules:
       Paths_optimips_prime
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
+    , containers
+    , text
   default-language: Haskell2010
 
 executable optimips-prime-exe
@@ -44,6 +48,7 @@ executable optimips-prime-exe
   build-depends:
       base >=4.7 && <5
     , optimips-prime
+    , text
   default-language: Haskell2010
 
 test-suite optimips-prime-test
