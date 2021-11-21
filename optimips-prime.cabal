@@ -25,9 +25,9 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
       RedundantStoreRemoval
       StrengthOptimizer
+      UnnecessaryJumpRemoval
       Utils
   other-modules:
       Paths_optimips_prime

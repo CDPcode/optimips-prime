@@ -7,6 +7,9 @@ module Utils (
     , getOperands
     , getOperator
     , normalizeProgram
+    , isLabel
+    , maybeGetLabel
+    , repeatUntilFixed
     ) where
 
 import Data.Text    (Text)
@@ -42,3 +45,10 @@ getOperands inst = Text.splitOn "," $ Text.concat $ tail $ Text.words inst
 getOperator :: Text -> Text
 getOperator "" = ""
 getOperator xs = head $ Text.words xs
+
+repeatUntilFixed :: (Eq a) => (a -> a) -> a -> a
+repeatUntilFixed f p
+    | p == q    = p
+    | otherwise = repeatUntilFixed f q
+  where 
+    q = f p
